@@ -1,5 +1,6 @@
 import sys
-import logging
+
+from src.logger import logging
 
 # Logging configuration
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -24,5 +25,5 @@ if __name__ == "__main__":
     try:
         a = 1 / 0
     except Exception as e:
-        logging.error("An exception occurred!")
+        logging.info("An exception occurred!")
         raise CustomException(e, sys)
